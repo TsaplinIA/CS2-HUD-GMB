@@ -1,0 +1,25 @@
+version: '3'
+services:
+  hud-service1:
+    build: .
+    environment:
+      - NODE_ENV=production
+    restart: always
+    entrypoint: ./start.sh
+    ports:
+      - "8081:2626"
+      - "8082:1337"
+      - "8083:36363"
+      - "8084:36364"
+
+  hud-service2:
+    build: .
+    environment:
+      - NODE_ENV=production
+    restart: always
+    entrypoint: ./start.sh
+    ports:
+      - "8181:2626"
+      - "8182:1337"
+      - "8183:36363"
+      - "8184:36364"
